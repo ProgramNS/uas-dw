@@ -1,6 +1,9 @@
 import streamlit as st
 import pickle
 
+# Display NIM and name
+st.sidebar.text("NIM: 2020230045")
+st.sidebar.text("Name: Nurman Syah")
 # Function to load the trained model
 def load_trained_model():
     with open('iris_model.pkl', 'rb') as model_file:
@@ -33,6 +36,4 @@ if st.button('Submit'):
     result = predict(input_data, model)
     st.success(result)
 
-# Display NIM and name
-st.sidebar.text("NIM: 2020230045")
-st.sidebar.text("Name: Nurman Syah")
+
